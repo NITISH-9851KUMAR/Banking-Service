@@ -1,5 +1,3 @@
-package Banking;
-
 public class UI {
 
     protected static final String url="jdbc:oracle:thin:@localhost:1521:XE";

@@ -1,18 +1,16 @@
-package Banking;
-
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
-public class BalanceCheck extends Banking.UI {
+public class BalanceCheck extends UI {
     public BalanceCheck(){
         java.util.Scanner sc=new java.util.Scanner(System.in);
         try{
             Class.forName("oracle.jdbc.driver.OracleDriver");
         }catch(Exception e){}
         try{
-            Connection connection=DriverManager.getConnection(url,userName,password);
+            Connection connection=DriverManager.getConnection(UI.url, UI.userName, UI.password);
             Statement statement=connection.createStatement();
             String query;
             ResultSet resultSet;

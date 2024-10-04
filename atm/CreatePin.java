@@ -1,16 +1,14 @@
-package Banking;
-
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
-public class CreatePin extends Banking.UI {
+public class CreatePin extends UI {
     java.util.Scanner sc=new java.util.Scanner(System.in);
     public CreatePin(){
 
         try{
-            Connection connection=DriverManager.getConnection(url,userName,password);
+            Connection connection=DriverManager.getConnection(UI.url, UI.userName, UI.password);
             Statement statement=connection.createStatement();
             String query;
             ResultSet resultSet;

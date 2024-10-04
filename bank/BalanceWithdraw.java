@@ -1,5 +1,3 @@
-package Banking;
-
 import Internship.oracle_Bank_System.passbook.Debit;
 
 import java.sql.Connection;
@@ -8,11 +6,11 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.Scanner;
 
-public class BalanceWithdraw extends Banking.UI {
+public class BalanceWithdraw extends UI {
     public BalanceWithdraw(){
         try {
             Scanner sc = new Scanner(System.in);
-            Connection connection = DriverManager.getConnection(url, userName, password);
+            Connection connection = DriverManager.getConnection(UI.url, UI.userName, UI.password);
             Statement statement = connection.createStatement();
             String query;
             ResultSet resultSet;

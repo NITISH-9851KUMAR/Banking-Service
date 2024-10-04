@@ -1,12 +1,10 @@
-package Banking;
-
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.Scanner;
 
-class AccountDetails extends Banking.UI {
+class AccountDetails extends UI {
     public AccountDetails(){
         try{
             Class.forName("oracle.jdbc.driver.OracleDriver");
@@ -16,7 +14,7 @@ class AccountDetails extends Banking.UI {
 
         try{
             Scanner sc=new Scanner(System.in);
-            Connection connection= DriverManager.getConnection(url,userName,password);
+            Connection connection= DriverManager.getConnection(UI.url, UI.userName, UI.password);
             Statement statement=connection.createStatement();
             String query;
             ResultSet resultSet;

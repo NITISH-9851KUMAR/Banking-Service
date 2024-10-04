@@ -1,12 +1,10 @@
-package Banking;
-
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.Scanner;
 
-class BalanceCheck extends Banking.UI {
+class BalanceCheck extends UI {
     public BalanceCheck() {
         {
             try{
@@ -14,7 +12,7 @@ class BalanceCheck extends Banking.UI {
             }catch(Exception e){}
             try {
                 Scanner sc = new Scanner(System.in);
-                Connection connection = DriverManager.getConnection(url, userName, password);
+                Connection connection = DriverManager.getConnection(UI.url, UI.userName, UI.password);
                 Statement statement = connection.createStatement();
                 String query;
                 ResultSet resultSet;

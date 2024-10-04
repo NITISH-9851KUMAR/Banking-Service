@@ -1,5 +1,3 @@
-package Banking;
-
 import Internship.oracle_Bank_System.passbook.PrintTransaction;
 
 import java.util.Scanner;
@@ -43,11 +41,11 @@ public class UI {
                     break;
 
                 case 3: //Check Balance
-                    new Banking.BalanceCheck();
+                    new BalanceCheck();
                     break;
 
                 case 4://Withdraw Balance
-                    new Banking.BalanceWithdraw();
+                    new BalanceWithdraw();
                     break;
 
                 case 5: //Deposit Balance

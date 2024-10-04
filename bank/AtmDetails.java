@@ -1,11 +1,9 @@
-package Banking;
-
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
-class AtmDetails extends Banking.UI {
+class AtmDetails extends UI {
     java.util.Scanner sc = new java.util.Scanner(System.in);
 
     //function that add space in atm number after four digits
@@ -21,7 +19,7 @@ class AtmDetails extends Banking.UI {
 
     public AtmDetails(){
         try {
-            Connection connection = DriverManager.getConnection(url,userName, password);
+            Connection connection = DriverManager.getConnection(UI.url, UI.userName, UI.password);
             Statement statement = connection.createStatement();
             String query=null;
             ResultSet resultSet;

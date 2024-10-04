@@ -1,17 +1,15 @@
-package Banking;
-
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.Scanner;
 
-class AccountFreeze extends Banking.UI {
+class AccountFreeze extends UI {
 
     public AccountFreeze() {
         Scanner sc = new Scanner(System.in);
         try {
-            Connection connection = DriverManager.getConnection(url, userName, password);
+            Connection connection = DriverManager.getConnection(UI.url, UI.userName, UI.password);
             Statement statement = connection.createStatement();
             String query=null;
             ResultSet resultSet;

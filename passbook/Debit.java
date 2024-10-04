@@ -1,5 +1,3 @@
-package Banking;
-
 import Internship.oracle_Bank_System.bank.UI;
 import Internship.oracle_Bank_System.function.Date;
 

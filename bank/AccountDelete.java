@@ -1,5 +1,3 @@
-package Banking;
-
 import Internship.oracle_Bank_System.function.UpdateSerialNo;
 import Internship.oracle_Bank_System.passbook.DeleteTransaction;
 
@@ -9,7 +7,7 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.Scanner;
 
-class AccountDelete extends Banking.UI {
+class AccountDelete extends UI {
     public AccountDelete(){
         Scanner sc=new Scanner(System.in);
 
@@ -18,7 +16,7 @@ class AccountDelete extends Banking.UI {
         }catch(Exception e){}
 
         try{
-            Connection connection=DriverManager.getConnection(url,userName,password);
+            Connection connection=DriverManager.getConnection(UI.url, UI.userName, UI.password);
             Statement statement=connection.createStatement();
             String query;
             ResultSet resultSet;

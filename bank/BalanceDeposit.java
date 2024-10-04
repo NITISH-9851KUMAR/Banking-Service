@@ -1,5 +1,3 @@
-package Banking;
-
 import Internship.oracle_Bank_System.passbook.Credit;
 
 import java.sql.Connection;
@@ -8,7 +6,7 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.Scanner;
 
-class BalanceDeposit extends Banking.UI {
+class BalanceDeposit extends UI {
     Scanner sc = new Scanner(System.in);
     public BalanceDeposit(){
         try {
@@ -16,7 +14,7 @@ class BalanceDeposit extends Banking.UI {
                 Class.forName("oracle.jdbc.driver.OracleDriver");
             }catch(Exception e){}
 
-            Connection connection = DriverManager.getConnection(url, userName, password);
+            Connection connection = DriverManager.getConnection(UI.url, UI.userName, UI.password);
             Statement statement = connection.createStatement();
             String query;
             ResultSet resultSet;

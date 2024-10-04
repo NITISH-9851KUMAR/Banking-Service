@@ -1,5 +1,3 @@
-package Banking;
-
 import Internship.oracle_Bank_System.function.AccNumber;
 import Internship.oracle_Bank_System.function.Date;
 import Internship.oracle_Bank_System.function.UpdateSerialNo;
@@ -11,7 +9,7 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.Scanner;
 
-public class AccountOpen extends Banking.UI {
+public class AccountOpen extends UI {
     public AccountOpen(){
         try{
             Class.forName("oracle.jdbc.driver.OracleDriver");
@@ -19,7 +17,7 @@ public class AccountOpen extends Banking.UI {
             e.getMessage();
         }
         try{
-            Connection connection=DriverManager.getConnection(url,userName,password);
+            Connection connection=DriverManager.getConnection(UI.url, UI.userName, UI.password);
             Statement statement=connection.createStatement();
             Scanner sc=new Scanner(System.in);
             String query;

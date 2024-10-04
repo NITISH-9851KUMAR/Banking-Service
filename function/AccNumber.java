@@ -1,4 +1,3 @@
-package Banking;
 import java.util.concurrent.ThreadLocalRandom;
 public class AccNumber {
     public static String accNumber(){
